@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Game</title>
+    <link rel="stylesheet" href="qa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Welcome to the Game! 🙈</h1>
+        <div class="question-container">
+            <h2 id="question">What is your name?</h2>
+        </div>
+        
+        <!-- Input for user's response -->
+        <input type="text" id="answer-input" placeholder="Type your answer here..." class="input-field">
+        <button id="submit-answer" class="submit-btn">Submit Answer</button>
+
+        <!-- This will display the final responses -->
+        <div id="responses-container" style="display: none;">
+            <h2>Your Responses</h2>
+            <ul id="responses-list"></ul>
+        </div>
+    </div>
+
+    <script src="qa.js"></script>
+</body>
+</html>

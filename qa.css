@@ -1,0 +1,128 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background: #222;
+}
+
+/* Card container */
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #8b15eb, #b48bd5); 
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #8b1ee9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #6a14b8;
+}
+
+/* Main headings */
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+#answer-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #444;
+    color: white;
+}
+
+/* Submit button */
+#submit-answer {
+    padding: 10px 20px;
+    background-color: #8b1ee9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit-answer:hover {
+    background-color: #6a14b8;
+}
+
+/* Responses container */
+#responses-container {
+    margin-top: 30px;
+}
+
+#responses-list {
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Specific class styles */
+.input-field, .submit-btn {
+    font-size: 18px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #answer-input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #submit-answer {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .input-field, .submit-btn {
+        font-size: 16px;
+    }
+}
