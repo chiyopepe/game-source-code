@@ -32,6 +32,8 @@ const answerInput = document.getElementById('answer-input');
 const submitButton = document.getElementById('submit-answer');
 const responsesContainer = document.getElementById('responses-container');
 const responsesList = document.getElementById('responses-list');
+const progressBar = document.querySelector('.progress-bar'); // Select the progress bar
+const spinner = document.querySelector('.spinner'); // Select the spinner element
 
 // Initial prompt to ask for the player's name
 let initialPrompt = "What is your name?";
@@ -72,6 +74,10 @@ function handleNextQuestion() {
             responses.push(answer);
             answerInput.value = "";  // Clear the input for the next question
             currentQuestionIndex++;  // Move to the next question
+
+            // Update progress bar
+            const progressPercentage = (currentQuestionIndex / questions.length) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
 
             // If there are more questions, ask the next one
             if (currentQuestionIndex < questions.length) {
@@ -126,14 +132,19 @@ function submitToGoogleForm() {
         formData.append(entryIds.questionEntries[index], response);
     });
 
+    // Show spinner while submitting
+    spinner.style.display = 'block';
+
     fetch(googleFormURL, {
         method: 'POST',
         body: formData,
         mode: 'no-cors' // This disables CORS for Google Form submission
     }).then(() => {
         console.log('Responses submitted to Google Form!');
+        spinner.style.display = 'none'; // Hide the spinner when submission is done
     }).catch(error => {
         console.error('Error submitting to Google Form:', error);
+        spinner.style.display = 'none'; // Hide the spinner even if there's an error
     });
 }
 
