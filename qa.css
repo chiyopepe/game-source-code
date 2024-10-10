@@ -1,4 +1,4 @@
-/* General styles */
+/* Keep all the other CSS */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +11,16 @@ body {
     background: #222;
 }
 
-/* Card container */
 .card {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #8b15eb, #b48bd5); 
+    background: linear-gradient(135deg, #8b15eb, #b48bd5);
     margin: 100px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
 }
 
-/* Buttons */
 button {
     padding: 10px 20px;
     background-color: #8b1ee9;
@@ -35,68 +33,64 @@ button {
 }
 
 button:hover {
-    background-color: #6a14b8;
+    background-color: #8b1ee9;
 }
 
-/* Main headings */
-h1 {
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 30px;
-    font-weight: 400;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Input field */
+/* Input field styling */
 #answer-input {
-    width: 80%;
+    width: 70%;
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
-    border-radius: 4px;
+    margin-top: 20px;
+    border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #444;
     color: white;
 }
 
-/* Submit button */
-#submit-answer {
-    padding: 10px 20px;
-    background-color: #8b1ee9;
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #8af313;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 20px;
     color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
-#submit-answer:hover {
-    background-color: #6a14b8;
+/* Loading Spinner */
+.spinner {
+    border: 6px solid #ccc; /* Light grey */
+    border-top: 6px solid #8af313; /* Purple */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none; /* Initially hidden */
 }
 
-/* Responses container */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide responses container initially */
 #responses-container {
     margin-top: 30px;
+    display: none;
 }
 
-#responses-list {
-    text-align: left;
-    color: white;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Specific class styles */
-.input-field, .submit-btn {
-    font-size: 18px;
-}
-
-/* Mobile responsiveness */
+/* For mobile devices */
 @media (max-width: 600px) {
     .card {
         width: 100%;
@@ -120,9 +114,5 @@ h2 {
         width: 100%;
         padding: 12px;
         font-size: 14px;
-    }
-
-    .input-field, .submit-btn {
-        font-size: 16px;
     }
 }
